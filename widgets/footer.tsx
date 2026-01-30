@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { ADDRESS, EMAIL, TELEPHONE } from '@/data/contacts'
 import { Home, Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 
@@ -14,7 +15,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Home className="h-6 w-6 text-primary" />
-              <h3 className="text-lg font-bold text-foreground">Каркас-Дом</h3>
+              <h3 className="text-lg font-bold text-foreground">СТРОЙРЕМОНТ</h3>
             </div>
             <p className="text-sm text-muted-foreground">
               Строительство качественных каркасных домов под ключ. 
@@ -116,31 +117,31 @@ export function Footer() {
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <div>
-                  <a href="tel:+79999999999" className="hover:text-primary transition-colors">
-                    +7 (999) 999-99-99
+                  <a href={`tel:${TELEPHONE}`} className="hover:text-primary transition-colors">
+                    {TELEPHONE}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <div>
-                  <a href="mailto:info@karkas-dom.ru" className="hover:text-primary transition-colors">
-                    info@karkas-dom.ru
+                  <a href={`mailto:${EMAIL}`} className="hover:text-primary transition-colors">
+                    {EMAIL}
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 <div>
-                  г. Москва, ул. Строительная, д. 1
+                  {ADDRESS}
                 </div>
               </li>
             </ul>
             <div className="pt-2">
               <p className="text-xs text-muted-foreground">
                 Режим работы:<br />
-                Пн-Пт: 9:00 - 18:00<br />
-                Сб-Вс: 10:00 - 16:00
+                Пн-Пт: 9:00 - 20:00<br />
+                Сб-Вс: 10:00 - 18:00
               </p>
             </div>
           </div>
